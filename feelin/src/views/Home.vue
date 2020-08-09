@@ -4,22 +4,56 @@
       <span>
         <div class="home__landing--welcome">
           <h1>Let's get digital!</h1>
-          <p>
-            Bits and bytes. That's the future. Daar helpen wij gerust een handje
-            in mee. We bundelen onze sterktes om voor u, als klant, een
-            vernieuwend en mooi product af te leveren. Een website, een app, ...
-            Het aanbod is zo groot!
-          </p>
+          <span>
+            <p>
+              Bits and bytes. That's the future. Daar helpen wij gerust een
+              handje in mee. We bundelen onze sterktes om voor u, als klant, een
+              vernieuwend en mooi product af te leveren. Een website, een app,
+              ... Het aanbod is zo groot!
+            </p>
+          </span>
 
           <div class="home__landing--welcome--redirect">
             <a href="/contact">Contacteer ons</a>
             <span></span>
           </div>
-        </div>
 
-        <div class="home__landing--cards"></div>
+          <div class="home__landing--cards">
+            <attention-card
+              img="eyes.svg"
+              title="Let's get visible!"
+            ></attention-card>
+            <attention-card
+              img="profit.svg"
+              title="Let's get profitable!"
+            ></attention-card>
+            <attention-card
+              img="connect.svg"
+              title="Let's get connected!"
+            ></attention-card>
+          </div>
+        </div>
       </span>
     </section>
+
+    <section class="home__info">
+      <info-section
+        v-bind:side="true"
+        img="pc.svg"
+        title="Sterk digitaal werk"
+        context="De wereld verandert snel. Zeer snel. We kunnen dan ook niet op onze luie kont blijven zitten. Wij moeten mee! Door onze gevariëerde kennis binnen de technologische wereld kunnen wij heel wat innoverende en sterke websites leveren."
+      ></info-section>
+      <info-section
+        v-bind:side="false"
+        img="phone.svg"
+        title="Mobile, that's the way!"
+        context="De wereld verandert snel. Zeer snel. We kunnen dan ook niet op onze luie kont blijven zitten. Wij moeten mee! Door onze gevariëerde kennis binnen de technologische wereld kunnen wij heel wat innoverende en sterke websites leveren."
+      ></info-section>
+    </section>
+
+    <section class="home__chat"></section>
+
+    <section class="home__reviews"></section>
   </div>
 </template>
 
@@ -38,9 +72,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 150px;
 
     &--welcome {
-      max-width: 400px;
       text-align: center;
 
       h1 {
@@ -50,18 +84,24 @@
         font-weight: 900;
       }
 
-      p {
-        font-family: Open Sans, sans-serif;
-        color: #484848;
-        font-size: 11px;
-        font-weight: 300;
-        margin-top: 20px;
+      span {
+        max-width: 400px;
+        display: inline-block;
+
+        p {
+          font-family: Open Sans, sans-serif;
+          color: #484848;
+          font-size: 13px;
+          font-weight: 300;
+          margin-top: 20px;
+        }
       }
 
       &--redirect {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 80px;
 
         a {
           color: #ef2e2e;
@@ -89,12 +129,48 @@
         }
       }
     }
+
+    &--cards {
+      display: none;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
+
+  &__info {
+    margin-top: 200px;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .home {
+    &__landing {
+      &--cards {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
 }
 </style>
 
 <script>
+import AttentionCard from "../components/AttentionCard";
+import InfoSection from "../components/InfoSection";
+
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    AttentionCard,
+    InfoSection
+  }
 };
 </script>
