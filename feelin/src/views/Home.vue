@@ -38,20 +38,20 @@
 
     <section class="home__info">
       <info-section
-        v-bind:side="true"
         img="pc.svg"
         title="Sterk digitaal werk"
         context="De wereld verandert snel. Zeer snel. We kunnen dan ook niet op onze luie kont blijven zitten. Wij moeten mee! Door onze gevariëerde kennis binnen de technologische wereld kunnen wij heel wat innoverende en sterke websites leveren."
       ></info-section>
       <info-section
-        v-bind:side="false"
         img="phone.svg"
         title="Mobile, that's the way!"
         context="De smartphone. Een zeer jong product dat in een zeer snelle tijdspanne de wereld overnam. Het is bijna ondenkbaar om gen smartphone op zak te hebben. Wat deze smartphone uniek maakt, zijn zijn applicatie's. Laat dat nu ook één van onze troeven zijn! App's op maat!"
       ></info-section>
     </section>
 
-    <section class="home__chat"></section>
+    <section class="home__chat">
+      <chat-box />
+    </section>
 
     <section class="home__reviews"></section>
   </div>
@@ -140,37 +140,47 @@
   &__info {
     margin-top: 200px;
   }
-}
 
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
+  &__chat {
+    margin-top: 200px;
+  }
 }
 
 @media (min-width: 992px) {
   .home {
     &__landing {
+      &--welcome {
+        h1 {
+          font-size: 2.5vw;
+        }
+
+        p {
+          font-size: 1vw;
+        }
+
+        a {
+          font-size: 1vw;
+        }
+      }
       &--cards {
         display: flex;
       }
     }
   }
 }
-
-@media (min-width: 1200px) {
-}
 </style>
 
 <script>
 import AttentionCard from "../components/AttentionCard";
 import InfoSection from "../components/InfoSection";
+import ChatBox from "../components/ChatBox";
 
 export default {
   name: "Home",
   components: {
     AttentionCard,
-    InfoSection
+    InfoSection,
+    ChatBox,
   }
 };
 </script>

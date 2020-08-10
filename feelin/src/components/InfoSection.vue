@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div v-if="side === true" class="info-section">
+    <div class="info-section">
       <div class="info-section__context">
         <div class="info-section__context--border"></div>
         <div class="info-section__context--text">
@@ -8,28 +8,14 @@
           <p>{{ context }}</p>
         </div>
       </div>
+
       <div class="info-section__img">
-        <img
-          :src="require('@/assets/' + img + '')"
-          alt="info-img"
-          id="img-right"
-        />
-      </div>
-    </div>
-    <div v-if="side === false" class="info-section">
-      <div class="info-section__context">
-        <div class="info-section__context--border"></div>
-        <div class="info-section__context--text">
-          <h1>{{ title }}</h1>
-          <p>{{ context }}</p>
+        <div class="info-section__img--background">
+            <img
+              :src="require('@/assets/' + img + '')"
+              alt="info-img"
+            />        
         </div>
-      </div>
-      <div class="info-section__img">
-        <img
-          :src="require('@/assets/' + img + '')"
-          alt="info-img"
-          id="img-left"
-        />
       </div>
     </div>
   </span>
@@ -41,6 +27,27 @@
   position: relative;
   margin-bottom: 100px;
   padding: 0px 30px;
+
+  &__img {
+    height: 425px;
+    width: 100%;
+    margin-top: 30px;
+
+    &--background {
+      background: #f5f5f5;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
 
   &__context {
     display: flex;
@@ -74,50 +81,46 @@
       }
     }
   }
-
-  &__img {
-    margin-top: 50px;
-
-    img {
-      width: 100%;
-    }
-
-    #img-right {
-      right: -100px;
-    }
-
-    #img-left {
-      left: auto;
-    }
-  }
 }
 
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-  .info-section {
+@media (min-width: 992px) {
+    .info-section {
     display: flex;
     padding: 0px 100px;
 
+    &__img {
+      width: 50%;
+      padding-left: 30px;
+      margin-top: 0;
+
+      &--background {
+        width: 100%;
+      }
+    }
+
     &__context {
       width: 50%;
+      padding-right: 30px;
 
       &--border {
         display: flex;
+        margin-right: 50px;
+        width: 0.2vw;
       }
 
       &--text {
         text-align: left;
+
+        h1 {
+          font-size: 2vw;
+        }
+
+        p {
+          font-size: 1vw;
+        }
       }
     }
   }
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
 }
 </style>
 
@@ -125,7 +128,6 @@
 export default {
   name: "InfoSection",
   props: {
-    side: Boolean,
     title: String,
     context: String,
     img: String

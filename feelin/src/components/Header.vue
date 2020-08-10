@@ -6,25 +6,25 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/">Diensten</a></li>
-        <li><a href="/">Portfolio</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><a href="/diensten">Diensten</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       <div class="header__socials">
         <ul>
           <li>
             <a href="" target="_blank"
-              ><img src="../assets/instagram.svg" alt=""
+              ><img src="../assets/instagram.svg" alt="instagram"
             /></a>
           </li>
           <li>
             <a href="" target="_blank"
-              ><img src="../assets/facebook.svg" alt=""
+              ><img src="../assets/facebook.svg" alt="facebook"
             /></a>
           </li>
           <li>
             <a href="" target="_blank"
-              ><img src="../assets/linkedin.svg" alt=""
+              ><img src="../assets/linkedin.svg" alt="linkedin"
             /></a>
           </li>
         </ul>
@@ -112,12 +112,6 @@ header {
       }
     }
   }
-}
-
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
