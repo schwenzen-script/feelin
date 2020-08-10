@@ -17,13 +17,6 @@
       </div>
     </div>
     <div v-if="side === false" class="info-section">
-      <div class="info-section__img">
-        <img
-          :src="require('@/assets/' + img + '')"
-          alt="info-img"
-          id="img-left"
-        />
-      </div>
       <div class="info-section__context">
         <div class="info-section__context--border"></div>
         <div class="info-section__context--text">
@@ -31,31 +24,39 @@
           <p>{{ context }}</p>
         </div>
       </div>
+      <div class="info-section__img">
+        <img
+          :src="require('@/assets/' + img + '')"
+          alt="info-img"
+          id="img-left"
+        />
+      </div>
     </div>
   </span>
 </template>
 
 <style lang="scss" scoped>
 .info-section {
-  display: flex;
   justify-content: space-between;
-  padding: 0 200px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  padding: 0px 30px;
 
   &__context {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
+
     &--border {
       width: 3px;
       background: #ef2e2e;
       height: 270px;
       border-radius: 10px;
+      display: none;
     }
 
     &--text {
-      margin-left: 30px;
+      text-align: center;
 
       h1 {
         font-family: Poppins, sans-serif;
@@ -75,12 +76,10 @@
   }
 
   &__img {
-    width: 50%;
-    height: 425px;
+    margin-top: 50px;
 
     img {
-      height: 425px;
-      position: absolute;
+      width: 100%;
     }
 
     #img-right {
@@ -91,6 +90,34 @@
       left: auto;
     }
   }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .info-section {
+    display: flex;
+    padding: 0px 100px;
+
+    &__context {
+      width: 50%;
+
+      &--border {
+        display: flex;
+      }
+
+      &--text {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
 </style>
 
