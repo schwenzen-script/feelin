@@ -1,7 +1,7 @@
 <template>
   <header id="header" :class="{ 'header-gone': !showNavbar }">
     <a href="/" class="header__img">
-      <img src="../assets/logo.svg" alt="logo" />
+      <img src="../assets/logo.png" alt="logo" />
     </a>
     <nav>
       <ul>

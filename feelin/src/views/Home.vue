@@ -38,7 +38,7 @@
 
     <section class="home__info">
       <info-section
-        img="pc.svg"
+        img="phone.png"
         title="Sterk digitaal werk"
         context="De wereld verandert snel. Zeer snel. We kunnen dan ook niet op onze luie kont blijven zitten. Wij moeten mee! Door onze gevariëerde kennis binnen de technologische wereld kunnen wij heel wat innoverende en sterke websites leveren."
       ></info-section>

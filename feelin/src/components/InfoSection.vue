@@ -1,6 +1,6 @@
 <template>
   <span>
-    <div class="info-section">
+    <div class="info-section" id="info-section">
       <div class="info-section__context">
         <div class="info-section__context--border"></div>
         <div class="info-section__context--text">
@@ -8,7 +8,6 @@
           <p>{{ context }}</p>
         </div>
       </div>
-
       <div class="info-section__img">
         <div class="info-section__img--background">
             <img
@@ -22,16 +21,30 @@
 </template>
 
 <style lang="scss" scoped>
+.context-appear {
+  left: 0 !important;
+  opacity: 1 !important;
+}
+
+.img-appear {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+
 .info-section {
   justify-content: space-between;
-  position: relative;
   margin-bottom: 100px;
   padding: 0px 30px;
+  position: relative;
 
   &__img {
     height: 425px;
     width: 100%;
     margin-top: 30px;
+    position: relative;
+    right: -150px;
+    opacity: 0;
+    transition: ease-in-out 1.5s;
 
     &--background {
       background: #f5f5f5;
@@ -53,6 +66,10 @@
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative;
+    left: -150px;
+    opacity: 0;
+    transition: ease-in-out 1.5s;
 
     &--border {
       width: 3px;
@@ -131,6 +148,45 @@ export default {
     title: String,
     context: String,
     img: String
+  },
+  documentElement: "#info-section",
+  created () {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.onScroll);
+  },
+  data () {
+    return {
+      offsetTop: 0
+    }
+  },
+  watch: {
+    offsetTop () {
+       this.callbackFunc()
+    }
+  },
+  methods: {
+    onScroll () {
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+    },
+    isElementInViewport(elm) {
+        var rect = elm.getBoundingClientRect();
+        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    },
+    callbackFunc() {
+      let items = document.querySelectorAll(".info-section");
+      for (var i = 0; i < items.length; i++) {
+        if (this.isElementInViewport(items[i])) {
+          const context = items[i].children.item(0);
+          const img = items[i].children.item(1);
+
+          context.classList.add("context-appear");
+          img.classList.add("img-appear");
+        }
+      }
+    }
   }
 };
 </script>
