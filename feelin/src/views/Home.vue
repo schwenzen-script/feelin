@@ -53,7 +53,7 @@
       <chat-box />
     </section>
 
-    <section class="home__reviews"></section>
+    <review-section />
   </div>
 </template>
 
@@ -174,6 +174,7 @@
 import AttentionCard from "../components/AttentionCard";
 import InfoSection from "../components/InfoSection";
 import ChatBox from "../components/ChatBox";
+import ReviewSection from "../components/ReviewSection";
 
 export default {
   name: "Home",
@@ -181,6 +182,7 @@ export default {
     AttentionCard,
     InfoSection,
     ChatBox,
+    ReviewSection
   }
 };
 </script>

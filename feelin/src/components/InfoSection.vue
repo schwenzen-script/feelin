@@ -10,10 +10,7 @@
       </div>
       <div class="info-section__img">
         <div class="info-section__img--background">
-            <img
-              :src="require('@/assets/' + img + '')"
-              alt="info-img"
-            />        
+          <img :src="require('@/assets/' + img + '')" alt="info-img" />
         </div>
       </div>
     </div>
@@ -101,7 +98,7 @@
 }
 
 @media (min-width: 992px) {
-    .info-section {
+  .info-section {
     display: flex;
     padding: 0px 100px;
 
@@ -150,30 +147,33 @@ export default {
     img: String
   },
   documentElement: "#info-section",
-  created () {
-    window.addEventListener('scroll', this.onScroll);
+  created() {
+    window.addEventListener("scroll", this.onScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.onScroll);
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
   },
-  data () {
+  data() {
     return {
       offsetTop: 0
-    }
+    };
   },
   watch: {
-    offsetTop () {
-       this.callbackFunc()
+    offsetTop() {
+      this.callbackFunc();
     }
   },
   methods: {
-    onScroll () {
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+    onScroll() {
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
     },
     isElementInViewport(elm) {
-        var rect = elm.getBoundingClientRect();
-        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(
+        document.documentElement.clientHeight,
+        window.innerHeight
+      );
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     },
     callbackFunc() {
       let items = document.querySelectorAll(".info-section");
