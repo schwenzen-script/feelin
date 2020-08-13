@@ -243,9 +243,9 @@ export default {
                     messages[2].classList.add("message-appear");
                     typing.innerHTML = "Jens Deryckere";
                   }, 500);
-                }, 2000);
+                }, 5000);
               }, 500);
-            }, 2000);
+            }, 5000);
           }, 500);
         }, 1000);
       }

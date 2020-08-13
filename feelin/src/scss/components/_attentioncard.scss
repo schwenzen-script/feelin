@@ -1,0 +1,25 @@
+.attention-card {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background: $white;
+  box-shadow: 0 3px 27px rgba($color: #4e4e4e, $alpha: 0.15);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  position: relative;
+  transition: ease-in-out 0.5s;
+
+  img {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    margin: 0;
+  }
+}

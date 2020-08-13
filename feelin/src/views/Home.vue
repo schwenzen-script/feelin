@@ -85,7 +85,7 @@
       }
 
       span {
-        max-width: 400px;
+        max-width: 500px;
         display: inline-block;
 
         p {

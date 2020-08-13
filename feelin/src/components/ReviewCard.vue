@@ -72,13 +72,42 @@
     <div class="review-card__content">
       <h1>"{{ title }}"</h1>
       <p>{{ review }}</p>
-      <p class="review-card__content--more">Lees meer...</p>
+      <p class="review-card__content--more" v-on:click="showMore">
+        Lees meer...
+      </p>
+      <p class="review-card__content--less" v-on:click="showLess">
+        Lees minder...
+      </p>
       <div class="review-card__content--gradient"></div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
+.review-card-reading {
+  height: auto !important;
+  overflow: auto !important;
+
+  .review-card__content {
+    &--more {
+      display: none !important;
+    }
+
+    &--less {
+      display: flex !important;
+    }
+
+    &--gradient {
+      display: none !important;
+    }
+  }
+}
+
+.review-card--appear {
+  bottom: 0 !important;
+  opacity: 1 !important;
+}
+
 .review-card {
   background-color: #fff;
   width: 400px;
@@ -88,6 +117,9 @@
   padding: 40px 30px;
   margin: 10px 0px;
   position: relative;
+  transition: ease-in-out 0.5s;
+  opacity: 0;
+  bottom: -100px;
 
   &__title {
     display: flex;
@@ -122,6 +154,8 @@
       width: 30px;
       height: 30px;
       margin-right: 5px;
+      fill: #f5f5f5;
+      transition: ease-in-out 0.5s;
     }
 
     &--star.filled {
@@ -156,6 +190,17 @@
       z-index: 5;
     }
 
+    &--less {
+      font-weight: bold !important;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      cursor: pointer;
+      color: #db4545 !important;
+      z-index: 5;
+      display: none;
+    }
+
     &--gradient {
       height: 100px;
       width: 100%;
@@ -182,7 +227,8 @@ export default {
     city: String,
     country: String,
     stars: Number,
-    review: String
+    review: String,
+    index: Number
   },
   documentElement: "#review-card",
   created() {
@@ -213,10 +259,25 @@ export default {
       );
       return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     },
+    showMore() {
+      const card = document.querySelectorAll(".review-card")[this.index];
+      card.classList.add("review-card-reading");
+    },
+    showLess() {
+      const card = document.querySelectorAll(".review-card")[this.index];
+      card.classList.remove("review-card-reading");
+    },
     callbackFunc() {
       const cards = document.querySelectorAll(".review-card");
 
       if (this.isElementInViewport(cards[0])) {
+        cards[0].classList.add("review-card--appear");
+        setTimeout(() => {
+          cards[1].classList.add("review-card--appear");
+          setTimeout(() => {
+            cards[2].classList.add("review-card--appear");
+          }, 500);
+        }, 500);
         for (let i = 0; i < cards.length; i++) {
           const starContainer = cards[i].children[2];
           for (let j = 0; j < Number(this.stars); j++) {
