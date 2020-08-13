@@ -155,7 +155,7 @@
         }
 
         p {
-          font-size: 1vw;
+          font-size: 0.8vw !important;
         }
 
         a {

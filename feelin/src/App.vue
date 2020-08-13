@@ -2,6 +2,7 @@
   <div id="app">
     <header-feelin />
     <router-view />
+    <footer-feelin />
   </div>
 </template>
 
@@ -15,10 +16,12 @@
 
 <script>
 import HeaderFeelin from "./components/Header";
+import FooterFeelin from "./components/Footer";
 
 export default {
   components: {
-    HeaderFeelin
+    HeaderFeelin,
+    FooterFeelin
   }
 };
 </script>

@@ -5,7 +5,30 @@
       <h1>Nog niet overtuigd?<br />Luister naar onze klanten!</h1>
     </div>
     <div class="home__reviews--cards">
-      <review-card />
+      <review-card
+        name="Zeg Ja!"
+        title="Lorem ipsum hé!"
+        city="Kortrijk"
+        country="België"
+        review="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus odit vitae eum non. Similique debitis ipsam praesentium explicabo ducimus voluptas accusamus neque totam iste molestias repellat, libero mollitia autem!"
+        v-bind:stars="5"
+      />
+      <review-card
+        name="Zeg Ja!"
+        title="Lorem ipsum hé!"
+        city="Kortrijk"
+        country="België"
+        review="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus odit vitae eum non. Similique debitis ipsam praesentium explicabo ducimus voluptas accusamus neque totam iste molestias repellat, libero mollitia autem!"
+        v-bind:stars="3"
+      />
+      <review-card
+        name="Zeg Ja!"
+        title="Lorem ipsum hé!"
+        city="Kortrijk"
+        country="België"
+        review="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus odit vitae eum non. Similique debitis ipsam praesentium explicabo ducimus voluptas accusamus neque totam iste molestias repellat, libero mollitia autem!"
+        v-bind:stars="5"
+      />
     </div>
   </div>
 </template>
@@ -22,6 +45,14 @@
       font-size: 30px;
       font-weight: bold;
     }
+  }
+
+  &--cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
   }
 }
 
