@@ -18,7 +18,7 @@
 import InfoSection from "../../components/sections/InfoSection";
 
 export default {
-  name: "InfoSection",
+  name: "Info",
   components: {
     InfoSection
   }

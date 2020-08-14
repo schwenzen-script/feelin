@@ -2,7 +2,7 @@
   <div class="review-card" id="review-card">
     <div class="review-card__title">
       <h1>{{ name }}</h1>
-      <img src="../assets/check.svg" alt="check" />
+      <img src="../../assets/check.svg" alt="check" />
     </div>
     <div class="review-card__location">
       <p>{{ city }}, {{ country }}</p>
@@ -84,138 +84,7 @@
 </template>
 
 <style lang="scss">
-.review-card-reading {
-  height: auto !important;
-  overflow: auto !important;
-
-  .review-card__content {
-    &--more {
-      display: none !important;
-    }
-
-    &--less {
-      display: flex !important;
-    }
-
-    &--gradient {
-      display: none !important;
-    }
-  }
-}
-
-.review-card--appear {
-  bottom: 0 !important;
-  opacity: 1 !important;
-}
-
-.review-card {
-  background-color: #fff;
-  width: 400px;
-  height: 365px;
-  overflow: hidden;
-  box-shadow: 0px 3px 27px rgba($color: #a2a2a2, $alpha: 0.25);
-  padding: 40px 30px;
-  margin: 10px 0px;
-  position: relative;
-  transition: ease-in-out 0.5s;
-  opacity: 0;
-  bottom: -100px;
-
-  &__title {
-    display: flex;
-    align-items: center;
-
-    h1 {
-      font-family: Poppins, sans-serif;
-      font-size: 16px;
-      color: #484848;
-      font-weight: bold;
-      margin: 0 5px 0 0;
-    }
-
-    img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-
-  &__location {
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    color: #989898;
-    font-weight: 200;
-  }
-
-  &__stars {
-    display: flex;
-    margin-top: 10px;
-
-    &--star {
-      width: 30px;
-      height: 30px;
-      margin-right: 5px;
-      fill: #f5f5f5;
-      transition: ease-in-out 0.5s;
-    }
-
-    &--star.filled {
-      fill: #ffde27 !important;
-    }
-  }
-
-  &__content {
-    margin-top: 50px;
-    h1 {
-      font-family: Poppins, sans-serif;
-      font-size: 16px;
-      color: #484848;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-family: Open Sans, sans-serif;
-      font-size: 12px;
-      color: #484848;
-      font-weight: 200;
-    }
-
-    &--more {
-      font-weight: bold !important;
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      cursor: pointer;
-      color: #4590db !important;
-      z-index: 5;
-    }
-
-    &--less {
-      font-weight: bold !important;
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      cursor: pointer;
-      color: #db4545 !important;
-      z-index: 5;
-      display: none;
-    }
-
-    &--gradient {
-      height: 100px;
-      width: 100%;
-      background: linear-gradient(
-        180deg,
-        rgba(244, 244, 244, 0) 0%,
-        rgba(255, 255, 255, 1) 67%
-      );
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 4;
-    }
-  }
-}
+@import '../../scss';
 </style>
 
 <script>

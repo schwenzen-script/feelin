@@ -8,6 +8,10 @@
     />
     <!-- Info section -->
     <info />
+    <!-- Chatbox section -->
+    <chat-box />
+    <!-- Review section -->
+    <reviews />
   </div>
 </template>
 
@@ -15,12 +19,16 @@
 /** Importing all partials in here! */
 import HomeHead from "../partials/home/Head";
 import Info from "../partials/home/Info";
+import ChatBox from "../partials/home/Chatbox";
+import Reviews from "../partials/home/Reviews";
 
 export default {
   name: "Home",
   components: {
     HomeHead,
-    Info
+    Info,
+    ChatBox,
+    Reviews,
   }
 };
 </script>
