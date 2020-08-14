@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" id="header">
     <!-- Logo into the header -->
     <a href="/" class="header__img">
       <img src="../assets/logo.png" alt="logo" />
@@ -36,7 +36,36 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  documentElement: "#header",
+  created() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
+  data() {
+    return {
+      offsetTop: 0
+    };
+  },
+  watch: {
+    fixHeader() {
+      this.onscroll();
+    },
+  },
+  methods: {
+    onScroll() {
+      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
+      let header = document.getElementById("header");
+
+      if (this.offsetTop > 50) {
+        header.classList.add("header-dissapear");
+      } else {
+        header.classList.remove("header-dissapear");
+      }
+    },
+  }
 };
 </script>
 

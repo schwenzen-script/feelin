@@ -4,6 +4,10 @@
 
     &--title {
         display: flex;
+        position: relative;
+        opacity: 0;
+        left: -200px;
+        transition: ease-in-out 0.5s;
 
         h1 {
             width: 100%;
@@ -44,4 +48,9 @@
             }
         }
     }
+}
+
+.title-appear {
+    opacity: 1 !important;
+    left: 0 !important;
 }
