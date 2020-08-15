@@ -1,7 +1,5 @@
 .home__reviews {
     margin-top: 200px;
-    padding: 0 30px;
-
     &--title {
         display: flex;
         position: relative;
@@ -29,8 +27,6 @@
 
 @media (min-width: 992px) {
     .home__reviews {
-        padding: 0 100px;
-
         &--title {
             display: flex;
             align-items: center;

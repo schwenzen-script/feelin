@@ -31,13 +31,22 @@
         </li>
       </ul>
     </nav>
+    <hamburger-button />
+    <hamburger-menu />
   </header>
 </template>
 
 <script>
+import HamburgerButton from "../components/buttons/HamburgerButton";
+import HamburgerMenu from "../partials/HamburgerMenu";
+
 export default {
   name: "Header",
   documentElement: "#header",
+  components: {
+    HamburgerButton,
+    HamburgerMenu
+  },
   created() {
     window.addEventListener("scroll", this.onScroll);
   },
@@ -52,7 +61,7 @@ export default {
   watch: {
     fixHeader() {
       this.onscroll();
-    },
+    }
   },
   methods: {
     onScroll() {
@@ -64,7 +73,7 @@ export default {
       } else {
         header.classList.remove("header-dissapear");
       }
-    },
+    }
   }
 };
 </script>

@@ -28,7 +28,10 @@ export default {
     HomeHead,
     Info,
     ChatBox,
-    Reviews,
+    Reviews
+  },
+  created() {
+    document.title = "Feelin Development | Home";
   }
 };
 </script>

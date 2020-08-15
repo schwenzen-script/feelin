@@ -5,7 +5,7 @@
       'background-image': 'url(' + require('../../assets/background.svg') + ')'
     }"
   >
-    <span>
+    <span class="container">
       <div class="home__head--welcome">
         <h1>
           {{ title }}

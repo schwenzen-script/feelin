@@ -1,5 +1,5 @@
 <template>
-  <section class="home__info">
+  <section class="home__info container">
     <info-section
       img="phone.png"
       title="Sterk digitaal werk"

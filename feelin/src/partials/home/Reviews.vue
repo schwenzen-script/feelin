@@ -1,5 +1,5 @@
 <template>
-  <div class="home__reviews" id="reviews">
+  <section class="home__reviews container" id="reviews">
     <div class="home__reviews--title">
       <span></span>
       <h1>Nog niet overtuigd?<br />Luister naar onze klanten!</h1>
@@ -33,7 +33,7 @@
         v-bind:index="2"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">
@@ -88,9 +88,9 @@ export default {
     callbackFunc() {
       const title = document.getElementsByClassName("home__reviews--title")[0];
       if (this.isElementInViewport(title)) {
-          title.classList.add("title-appear");
-      };
-    },
-  },
+        title.classList.add("title-appear");
+      }
+    }
+  }
 };
 </script>

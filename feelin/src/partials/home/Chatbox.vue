@@ -1,38 +1,38 @@
 <template>
-<section class="home__chatbox">
-      <div class="chatbox-section">
-    <div class="chatbox" id="chatbox">
-      <h1 class="chatbox__title">Een gesprek tussen de mensen!</h1>
+  <section class="home__chatbox">
+    <div class="chatbox-section container">
+      <div class="chatbox" id="chatbox">
+        <h1 class="chatbox__title">Een gesprek tussen de mensen!</h1>
 
-      <div class="chatbox__messages">
-        <div class="chatbox__messages--message" id="firstMessage">
-          <div class="chatbox__messages--message--img">
-            <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
+        <div class="chatbox__messages">
+          <div class="chatbox__messages--message" id="firstMessage">
+            <div class="chatbox__messages--message--img">
+              <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
+            </div>
+            <div class="chatbox__messages--message--content left-sided">
+              <p>Inzetbaar voor jouw applicatie's en websites!</p>
+            </div>
           </div>
-          <div class="chatbox__messages--message--content left-sided">
-            <p>Inzetbaar voor jouw applicatie's en websites!</p>
+          <div class="chatbox__messages--message right-side" id="secondMessage">
+            <div class="chatbox__messages--message--content right-sided">
+              <p>Creatief, innoverend en jong 😄</p>
+            </div>
+            <div class="chatbox__messages--message--img">
+              <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
+            </div>
           </div>
-        </div>
-        <div class="chatbox__messages--message right-side" id="secondMessage">
-          <div class="chatbox__messages--message--content right-sided">
-            <p>Creatief, innoverend en jong 😄</p>
-          </div>
-          <div class="chatbox__messages--message--img">
-            <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
-          </div>
-        </div>
-        <div class="chatbox__messages--message" id="thirdMessage">
-          <div class="chatbox__messages--message--img">
-            <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
-          </div>
-          <div class="chatbox__messages--message--content left-sided">
-            <p>En vriendjes onder elkaar, ideale samenwerking! 🥳</p>
+          <div class="chatbox__messages--message" id="thirdMessage">
+            <div class="chatbox__messages--message--img">
+              <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
+            </div>
+            <div class="chatbox__messages--message--content left-sided">
+              <p>En vriendjes onder elkaar, ideale samenwerking! 🥳</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <style lang="scss">
@@ -98,8 +98,8 @@ export default {
             }, 2000);
           }, 500);
         }, 1000);
-      };
-    },
-  },
+      }
+    }
+  }
 };
 </script>

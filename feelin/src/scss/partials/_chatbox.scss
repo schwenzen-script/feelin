@@ -17,7 +17,6 @@
 }
 
 .chatbox-section {
-    padding: 0 30px;
     opacity: 0;
     position: relative;
     bottom: -100px;
@@ -113,29 +112,7 @@
 }
 
 @media (min-width: 992px) {
-    .chatbox-section {
-        padding: 0 100px;
-    }
-
     .chatbox {
         padding: 50px 90px 30px 90px;
-
-        h1 {
-            font-size: 2vw;
-        }
-
-        &__messages {
-            &--message {
-                &--content {
-                    p {
-                        font-size: 1vw;
-                    }
-                }
-            }
-        }
-
-        &__typing {
-            font-size: 1vw;
-        }
     }
 }
