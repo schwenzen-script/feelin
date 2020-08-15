@@ -3,7 +3,7 @@
   <div class="services container">
     <!-- Including the head of the page -->
     <page-head
-      title="Onze diensten"
+      title="🔔 Onze diensten 🔔"
       context="Tijd voor verandering? Daar helpen wij gerust een handje mee. Neem een kijkje binnen ons aanbod!"
     />
     <!-- Including all services here -->

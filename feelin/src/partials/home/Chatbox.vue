@@ -18,7 +18,7 @@
               <p>Creatief, innoverend en jong 😄</p>
             </div>
             <div class="chatbox__messages--message--img">
-              <img src="../../assets/jens.jpg" alt="Jens Deryckere" />
+              <img src="../../assets/jens2.jpg" alt="Jens Deryckere" />
             </div>
           </div>
           <div class="chatbox__messages--message" id="thirdMessage">

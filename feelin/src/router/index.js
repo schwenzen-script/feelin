@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import Home from "../views/Home.vue";
 import Services from "../views/Services.vue";
+import Portfolio from "../views/Portfolio.vue";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/diensten",
     name: "Diensten",
     component: Services
+  },
+  {
+    path: "/portfolio",
+    name: "Portfolio",
+    component: Portfolio
   }
 ];
 

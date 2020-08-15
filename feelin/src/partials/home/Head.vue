@@ -6,7 +6,7 @@
     }"
   >
     <span class="container">
-      <div class="home__head--welcome">
+      <div class="home__head--welcome fadeIn">
         <h1>
           {{ title }}
         </h1>

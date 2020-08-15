@@ -31,7 +31,7 @@
         </li>
       </ul>
     </nav>
-    <hamburger-button />
+    <hamburger-button @click="toggleHamburger" />
     <hamburger-menu />
   </header>
 </template>
@@ -55,7 +55,8 @@ export default {
   },
   data() {
     return {
-      offsetTop: 0
+      offsetTop: 0,
+      visible: false
     };
   },
   watch: {
@@ -64,6 +65,10 @@ export default {
     }
   },
   methods: {
+    toggleHamburger() {
+      this.visible = !this.visible;
+      console.log(this.visible);
+    },
     onScroll() {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;
       let header = document.getElementById("header");
