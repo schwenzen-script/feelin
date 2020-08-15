@@ -75,6 +75,33 @@
   }
 }
 
+// The main head of a page
+.head {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  width: 100%;
+
+  &__content {
+    h1 {
+      font-family: $poppins;
+      text-align: center;
+      color: $gray-3;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: $opensans;
+      text-align: center;
+      color: $gray-2;
+      font-size: 13px;
+      font-weight: 200;
+      margin-top: 20px;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .home {
     &__head {
