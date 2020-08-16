@@ -100,7 +100,7 @@
       font-family: $poppins;
       text-align: center;
       color: $gray-3;
-      font-size: 35px;
+      font-size: 28px;
       font-weight: 700;
     }
 
@@ -124,6 +124,14 @@
 
       &--cards {
         display: flex;
+      }
+    }
+  }
+
+  .head {
+    &__content {
+      h1 {
+        font-size: 35px;
       }
     }
   }
