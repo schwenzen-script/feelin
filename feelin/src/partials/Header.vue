@@ -31,7 +31,7 @@
         </li>
       </ul>
     </nav>
-    <hamburger-button @click="toggleHamburger" />
+    <hamburger-button @click.native="toggleHamburger" />
     <hamburger-menu />
   </header>
 </template>
@@ -66,8 +66,29 @@ export default {
   },
   methods: {
     toggleHamburger() {
+      const hamburgerButton = document.querySelectorAll(".hamburger-button")[0];
+      const hamburgerMenu = document.querySelectorAll(".hamburger-menu")[0];
+      const header = document.querySelectorAll(".header")[0];
+
       this.visible = !this.visible;
-      console.log(this.visible);
+
+      if (this.visible === true) {
+        hamburgerButton.classList.add("close");
+        header.classList.add("show-hamburger");
+        hamburgerMenu.style.display = "flex";
+
+        setTimeout(() => {
+          hamburgerMenu.classList.add("show-hamburger-menu");
+        }, 200);
+      } else {
+        hamburgerButton.classList.remove("close");
+        header.classList.remove("show-hamburger");
+        hamburgerMenu.classList.remove("show-hamburger-menu");
+
+        setTimeout(() => {
+          hamburgerMenu.style.display = "none";
+        }, 200);
+      }
     },
     onScroll() {
       this.offsetTop = window.pageYOffset || document.documentElement.scrollTop;

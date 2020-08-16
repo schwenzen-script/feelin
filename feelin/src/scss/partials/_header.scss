@@ -33,6 +33,10 @@
     top: 0 !important;
     display: block;
     background-color: rgba($color: #FFF, $alpha: 1) !important;
+
+    .hamburger-button {
+        top: 50px;
+    }
 }
 
 // A visible navigation
@@ -104,4 +108,8 @@
    background-color: rgba($color: #FFF, $alpha: 0.8);
    top: 0;
    box-shadow: 0px 3px 8px rgba($color: #FFF, $alpha: 0.1);
+
+   .hamburger-button {
+       top: 30px;
+   }
 }

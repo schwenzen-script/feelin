@@ -3,6 +3,9 @@
     height: 100%;
     display: none;
     align-items: center;
+    position: relative;
+    top: -500px;
+    opacity: 0;
 
     span {
         width: 100%;
@@ -51,4 +54,9 @@
             }
         }
     }
+}
+
+.show-hamburger-menu {
+    opacity: 1 !important;
+    top: 0 !important;
 }
