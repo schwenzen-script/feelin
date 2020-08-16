@@ -6,8 +6,8 @@
         'background-image': 'url(' + require('../assets/background.svg') + ')'
       }"
     ></div>
-    <div class="row d-flex justify-content-center w-100">
-      <div class="col-md-5 col-12 head__content">
+    <div class="row d-flex justify-content-center w-100 m-0">
+      <div class="col-md-6 col-12 head__content">
         <h1>{{ title }}</h1>
         <p>{{ context }}</p>
         <hr />

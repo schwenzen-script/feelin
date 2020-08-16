@@ -2,7 +2,7 @@
   <div class="col-md-4">
     <div class="case-card">
       <div class="case-card__img">
-        <img src="" alt="" />
+        <img :src="require('@/assets/' + img + '')" alt="case-img" />
       </div>
       <div class="case-card__context">
         <h1>
@@ -14,8 +14,11 @@
         </p>
       </div>
 
-      <div class="case-card__link">
-        <div class="case-card__link--circle"></div>
+      <div v-if="online" class="case-card__link">
+        <a :href="route" target="_blank">
+          <div class="case-card__link--circle"><p>🔗</p></div>
+          <p class="case-card__link--text">Check et ut!</p>
+        </a>
       </div>
     </div>
   </div>
@@ -23,7 +26,14 @@
 
 <script>
 export default {
-  name: "CaseCard"
+  name: "CaseCard",
+  props: {
+    title: String,
+    context: String,
+    img: String,
+    online: Boolean,
+    route: String
+  }
 };
 </script>
 
