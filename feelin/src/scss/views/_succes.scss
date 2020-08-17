@@ -1,0 +1,24 @@
+.succes {
+    &__back {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        a {
+            background-color: $red;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: $white;
+            font-family: $poppins;
+            font-weight: 700;
+            font-size: 13px;
+            transition: ease-in-out 0.5s;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: $white;
+            opacity: 0.8;
+        }
+    }
+}

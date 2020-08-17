@@ -20,6 +20,9 @@ export default {
   components: {
     PageHead,
     ContactSection
+  },
+  created() {
+    document.title = "Feelin Development | Contact";
   }
 };
 </script>

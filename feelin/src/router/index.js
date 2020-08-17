@@ -5,6 +5,7 @@ import Home from "../views/Home.vue";
 import Services from "../views/Services.vue";
 import Portfolio from "../views/Portfolio.vue";
 import Contact from "../views/Contact.vue";
+import Succes from "../views/Succes.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact
+  },
+  {
+    path: "/succes",
+    name: "Succes",
+    component: Succes
   }
 ];
 

@@ -11,9 +11,19 @@
       <div class="hamburger-menu__socials">
         <p>Volg ons via</p>
         <span>
-          <a href=""><img src="../assets/facebook.svg" alt="facebook"/></a>
-          <a href=""><img src="../assets/linkedin.svg" alt="linkedin"/></a>
-          <a href=""><img src="../assets/instagram.svg" alt="instagram"/></a>
+          <a
+            href="https://www.facebook.com/Feelin-Development-123555286003107"
+            target="_blank"
+            ><img src="../assets/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/feelin-development"
+            target="_blank"
+            ><img src="../assets/linkedin.svg" alt="linkedin"
+          /></a>
+          <a href="" target="_blank"
+            ><img src="../assets/instagram.svg" alt="instagram"
+          /></a>
         </span>
       </div>
     </span>

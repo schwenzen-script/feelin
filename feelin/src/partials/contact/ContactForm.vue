@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-8 col-12">
     <div class="contact-form" id="contact-form">
-      <form action="">
+      <form action="/succes" name="contact" netlify>
         <div class="row">
           <div class="col-12 contact-form__text">
             <h1>Stuur ons een berichtje! 📧</h1>

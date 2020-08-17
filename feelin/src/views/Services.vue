@@ -25,6 +25,9 @@ export default {
     PageHead,
     MainServices,
     ServiceSections
+  },
+  created() {
+    document.title = "Feelin Development | Services";
   }
 };
 </script>

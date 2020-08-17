@@ -10,7 +10,9 @@
       </div>
     </div>
     <div class="col-12 col-lg-6">
-      <div class="service-section__img"></div>
+      <div class="service-section__img">
+        <img :src="require('@/assets/' + img + '')" alt="service-img" />
+      </div>
     </div>
   </div>
 </template>

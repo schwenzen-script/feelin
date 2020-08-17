@@ -20,12 +20,16 @@
           /></a>
         </li>
         <li>
-          <a href="" target="_blank"
+          <a
+            href="https://www.facebook.com/Feelin-Development-123555286003107"
+            target="_blank"
             ><img src="../assets/facebook.svg" alt="facebook"
           /></a>
         </li>
         <li>
-          <a href="" target="_blank"
+          <a
+            href="https://www.linkedin.com/company/feelin-development"
+            target="_blank"
             ><img src="../assets/linkedin.svg" alt="linkedin"
           /></a>
         </li>
